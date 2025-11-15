@@ -1,0 +1,295 @@
+/* Base Styles - Common to both dark and light modes */
+:root {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.text-gradient {
+    background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Styles */
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #D1D5DB;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.site-nav-mobile {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.site-nav-mobile[data-open="true"] {
+    max-height: 300px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    transition: background 200ms ease, transform 150ms ease;
+}
+
+.theme-toggle:active {
+    transform: scale(0.96);
+}
+
+body {
+    background-color: #0f1724;
+    color: #E6EEF6;
+}
+
+.bg-gray-900 {
+    background-color: #0f1724;
+}
+
+.bg-gray-800 {
+    background-color: #1e293b;
+}
+
+.bg-gray-950 {
+    background-color: #0f1724;
+}
+
+.text-gray-300 {
+    color: #cbd5e1;
+}
+
+.text-gray-400 {
+    color: #94a3b8;
+}
+
+.text-gray-500 {
+    color: #64748b;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.hero-visual {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.service-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border-color: #3B82F6;
+}
+
+.service-card.is-active {
+    border-color: #06B6D4;
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.2);
+}
+
+.member-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    border-color: #3B82F6;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-section-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    transition: all 0.3s ease;
+}
+
+.service-section-card:hover {
+    transform: translateY(-5px);
+    border-color: #3B82F6;
+}
+
+.contact-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.form-input {
+    background-color: rgba(30, 41, 59, 0.9);
+    border: 1px solid #475569;
+    color: #E2E8F0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #3B82F6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.value-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    transition: background 0.3s ease;
+}
+
+.value-card:hover {
+    background: rgba(45, 212, 191, 0.1);
+}
+
+.light-mode body {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.light-mode .bg-gray-900 {
+    background-color: #f8fafc;
+}
+
+.light-mode .bg-gray-800 {
+    background-color: #f1f5f9;
+}
+
+.light-mode .bg-gray-950 {
+    background-color: #f8fafc;
+}
+
+.light-mode .text-gray-300 {
+    color: #334155;
+}
+
+.light-mode .text-gray-400 {
+    color: #475569;
+}
+
+.light-mode .text-gray-500 {
+    color: #64748b;
+}
+
+.light-mode .text-white {
+    color: #0f172a;
+}
+
+.light-mode .hero-visual {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+    border-color: rgba(12,74,110,0.06);
+}
+
+.light-mode .service-card {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: rgba(2,6,23,0.04);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+}
+
+.light-mode .member-card {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    color: #0f172a;
+    border-color: rgba(2,6,23,0.04);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.04);
+}
+
+.light-mode .service-section-card {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    color: #0f172a;
+    border-color: rgba(2,6,23,0.04);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.04);
+}
+
+.light-mode .contact-card {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    color: #0f172a;
+    border-color: rgba(2,6,23,0.04);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+.light-mode .form-input {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+}
+
+.light-mode .form-input:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.light-mode .value-card {
+    background: #ffffff;
+    border-color: rgba(2,6,23,0.04);
+    color: #0f172a;
+}
+
+.light-mode .value-card:hover {
+    background: rgba(6, 182, 212, 0.05);
+}
+
+.light-mode .theme-toggle {
+    background: rgba(15,23,42,0.04);
+    color: #0f172a;
+}
+
+.light-mode header {
+    background-color: rgba(248, 250, 252, 0.95) !important;
+    border-bottom-color: #cbd5e1 !important;
+}
+
+.light-mode .site-nav-mobile {
+    background-color: #f1f5f9 !important;
+    border-top-color: #cbd5e1 !important;
+}
+
+.light-mode .border-gray-800 {
+    border-color: #cbd5e1 !important;
+}
+
+.light-mode .border-gray-700 {
+    border-color: #e2e8f0 !important;
+}
+
+.light-mode .cta {
+    background-color: rgba(241, 245, 249, 0.5) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
