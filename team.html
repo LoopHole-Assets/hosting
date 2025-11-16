@@ -4,252 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team | LoopHole InfoTech</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <!-- Load Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-gray-900 text-gray-300 antialiased">
+<body class="light-mode">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-xl font-extrabold text-white tracking-wider hover:text-cyan-400 transition duration-200">LoopHole InfoTech</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">
-                    <svg id="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l7 4v6l-7 4-7-4V6z"/>
+                </svg>
+                LoopHole
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="team.html" aria-current="page">Team</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle-btn">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.591-1.592a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 011.06 0l1.591 1.592a.75.75 0 01-1.06 1.06l-1.591-1.592a.75.75 0 010-1.06zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zM5.106 17.834a.75.75 0 010-1.06l1.591-1.592a.75.75 0 111.061 1.06l-1.591 1.592a.75.75 0 01-1.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zM6.106 5.106a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.06 1.061L5.106 6.166a.75.75 0 010-1.06z" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.949a.75.75 0 01.82.162 10.503 10.503 0 01-4.128 5.135A10.477 10.477 0 0112 22.5a10.5 10.5 0 01-10.5-10.5c0-4.307 2.54-7.962 6.028-9.532a.75.75 0 01.82.162z" clip-rule="evenodd" />
                     </svg>
                 </button>
-                
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html" class="text-gray-300 hover:text-white transition duration-200 p-2 rounded-lg">Home</a>
-                                        <a href="index.html" class="text-gray-300 hover:text-white transition duration-200 p-2 rounded-lg">About</a>
-                    <a href="services.html" class="text-gray-300 hover:text-white transition duration-200 p-2 rounded-lg">Services</a>
-                    <a href="team.html" aria-current="page" class="text-cyan-400 border-b-2 border-cyan-400 pb-2 p-2 rounded-t-lg"> Team</a>
-                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition duration-300 shadow-lg">Contact</a>
-                </nav>
+            </nav>
 
-                <!-- Mobile Toggle Button -->
-                <button class="nav-toggle md:hidden p-2" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        
-        <!-- Mobile Nav Menu (Hidden by default) -->
-        <nav class="site-nav-mobile md:hidden bg-gray-800 border-t border-gray-700" data-open="false">
-            <div class="px-4 pt-2 pb-4 space-y-2 flex flex-col">
-                <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">Home</a>
-                <a href="services.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">Services</a>
-                <a href="team.html" aria-current="page" class="text-cyan-400 block px-3 py-2 rounded-md bg-gray-700/50">About / Team</a>
-                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white text-center block px-3 py-2 rounded-md transition duration-300">Plan your project</a>
-            </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <!-- Team Hero Section -->
-        <section class="py-20 md:py-24 bg-gray-900 border-b border-gray-800">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-                <span class="text-sm font-semibold uppercase tracking-widest text-blue-400 mb-4 inline-block">The people behind the code</span>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                    Meet the <span class="text-gradient">Core Team</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-                    LoopHole InfoTech is powered by a multidisciplinary team, each bringing specialized expertise in development, strategy, and digital growth.
-                </p>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container text-center">
+                <h1>Meet Our Team</h1>
+                <p class="text-muted">Talented individuals working together to build great websites</p>
             </div>
         </section>
 
-        <!-- Team Members Grid -->
-        <section class="py-20 md:py-28">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <!-- Team Member 1: Laxmi Prasad Rimal -->
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <img src="assets/img/sabin.png" 
-                             alt="Laxmi Prasad Rimal Headshot" 
-                             class="w-36 h-36 object-cover rounded-full mx-auto mb-6 border-4 border-cyan-500/50 shadow-lg"
-                             width="200" height="200">
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Laxmi Prasad Rimal</h2>
-                        <p class="text-cyan-400 font-medium mb-4">Frontend and Backend Developer</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6">
-                            <p class="bg-gray-700/50 py-1 px-3 rounded-full inline-block">
-                                <span class="font-semibold text-white">Worked At:</span> Software Developer at Parsedom
-                            </p>
+        <!-- Team Section -->
+        <section>
+            <div class="container">
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="assets/img/sabin.png" alt="Laxmi Prasad Rimal">
                         </div>
-                        
-                        <!-- Link Button -->
-                        <a href="https://laxmiprasadrimal.com.np/" target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm transition duration-300">
-                            Personal Website
-                            <!-- SVG Icon for External Link -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                        </a>
-                    </article>
+                        <h3>Laxmi Prasad Rimal</h3>
+                        <p class="team-role">Frontend and Backend Developer</p>
+                        <p class="team-bio">Specializes in creating seamless user experiences and robust server-side logic. Worked as a Software Developer at Parsedom.</p>
+                        <a href="https://laxmiprasadrimal.com.np/" target="_blank" class="team-link">Personal Website →</a>
+                    </div>
 
-                    <!-- Team Member 2: Safal Gautam -->
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <img src="assets/img/safal.jpg" 
-                             alt="Safal Gautam Headshot" 
-                             class="w-36 h-36 object-cover rounded-full mx-auto mb-6 border-4 border-cyan-500/50 shadow-lg"
-                             width="200" height="200">
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Safal Gautam</h2>
-                        <p class="text-cyan-400 font-medium mb-4">Full Stack Developer</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6">
-                            <p class="bg-gray-700/50 py-1 px-3 rounded-full inline-block">
-                                <span class="font-semibold text-white">Worked At:</span> Fullstack developer at Hazesoft
-                            </p>
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="assets/img/safal.jpg" alt="Safal Gautam">
                         </div>
-                        
-                        <!-- Link Button (LinkedIn) -->
-                        <a href="https://www.linkedin.com/in/safal-gautam/" target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm transition duration-300">
-                            LinkedIn Profile
-                            <!-- SVG Icon for LinkedIn (Placeholder - using external link for simplicity) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                        </a>
-                    </article>
+                        <h3>Safal Gautam</h3>
+                        <p class="team-role">Full Stack Developer</p>
+                        <p class="team-bio">Builds end-to-end solutions, from the database to the user interface. Worked as a Fullstack developer at Hazesoft.</p>
+                        <a href="https://www.linkedin.com/in/safal-gautam/" target="_blank" class="team-link">LinkedIn Profile →</a>
+                    </div>
 
-                    <!-- Team Member 3: Pranish Pudasaini -->
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <img src="assets/img/pranish.jpg" 
-                             alt="Pranish Pudasaini Headshot" 
-                             class="w-36 h-36 object-cover rounded-full mx-auto mb-6 border-4 border-cyan-500/50 shadow-lg"
-                             width="200" height="200">
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Pranish Pudasaini</h2>
-                        <p class="text-cyan-400 font-medium mb-4">Team Lead</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6 h-6">
-                            <!-- Empty space for consistent layout -->
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="assets/img/pranish.jpg" alt="Pranish Pudasaini">
                         </div>
-                        
-                        <!-- No Link -->
-                        <div class="inline-flex items-center justify-center bg-gray-700 text-gray-400 px-4 py-2 rounded-full text-sm">
-                            Contact for link
-                        </div>
-                    </article>
-                    
-                    <!-- Team Member 4: Kushal Khadka -->
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <img src="assets/img/kushal.jpg" 
-                             alt="Kushal Khadka Headshot" 
-                             class="w-36 h-36 object-cover rounded-full mx-auto mb-6 border-4 border-cyan-500/50 shadow-lg"
-                             width="200" height="200">
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Kushal Khadka</h2>
-                        <p class="text-cyan-400 font-medium mb-4">Accounts, Finance and Team Lead</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6 h-6">
-                            <!-- Empty space for consistent layout -->
-                        </div>
-                        
-                        <!-- No Link -->
-                        <div class="inline-flex items-center justify-center bg-gray-700 text-gray-400 px-4 py-2 rounded-full text-sm">
-                            Contact for link
-                        </div>
-                    </article>
+                        <h3>Pranish Pudasaini</h3>
+                        <p class="team-role">Team Lead</p>
+                        <p class="team-bio">Leads the team with a focus on project strategy and execution.</p>
+                    </div>
 
-                    
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <div class="w-36 h-36 rounded-full mx-auto mb-6 bg-slate-200/10 border-4 border-cyan-500/30 flex items-center justify-center text-sm text-cyan-300 font-semibold">
-                            No image yet
+                    <!-- Team Member 4 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="assets/img/kushal.jpg" alt="Kushal Khadka">
                         </div>
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Aalok Nepal</h2>
-                        <p class="text-cyan-400 font-medium mb-4">&nbsp;</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6">
-                            
-                        </div>
-                        
-                        <!-- No Link -->
-                        <div class="inline-flex items-center justify-center bg-gray-700 text-gray-400 px-4 py-2 rounded-full text-sm">
-                            Contact for link
-                        </div>
-                    </article>
-                    
-                    <!-- Team Member 6: Laxman Mangranti -->
-                    <article class="member-card p-6 rounded-2xl text-center">
-                        <img src="https://placehold.co/200x200/1E293B/E2E8F0?text=LM" 
-                             alt="Laxman Mangranti Headshot" 
-                             class="w-36 h-36 object-cover rounded-full mx-auto mb-6 border-4 border-cyan-500/50 shadow-lg"
-                             width="200" height="200">
-                        
-                        <h2 class="text-2xl font-bold text-white mb-1">Laxman Mangranti</h2>
-                        <p class="text-cyan-400 font-medium mb-4">Social media Handler</p>
-                        
-                        <div class="space-y-2 text-sm text-gray-400 mb-6 h-6">
-                            <!-- Empty space for consistent layout -->
-                        </div>
-                        
-                        <!-- No Link -->
-                        <div class="inline-flex items-center justify-center bg-gray-700 text-gray-400 px-4 py-2 rounded-full text-sm">
-                            Contact for link
-                        </div>
-                    </article>
+                        <h3>Kushal Khadka</h3>
+                        <p class="team-role">Accounts, Finance and Team Lead</p>
+                        <p class="team-bio">Manages financial operations and co-leads the team to ensure project success.</p>
+                    </div>
 
+                    <!-- Team Member 5 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">👨‍💻</div>
+                        </div>
+                        <h3>Aalok Nepal</h3>
+                        <p class="team-role">Managing Lead</p>
+                        <p class="team-bio">Oversees project management and ensures client satisfaction.</p>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">📱</div>
+                        </div>
+                        <h3>Laxman Mangranti</h3>
+                        <p class="team-role">Management Lead</p>
+                        <p class="team-bio">Manages team operations and project workflows.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section py-20 md:py-28 bg-gray-800 border-t border-gray-700">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="cta text-center max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-                        Ready to align with our team?
-                    </h2>
-                    <p class="text-gray-400 text-lg mb-8">
-                        Get in touch with the team leads to discuss how our expertise can accelerate your project's goals.
-                    </p>
-                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-xl shadow-blue-500/50" href="contact.html">
-                        Start the conversation
-                    </a>
-                </div>
+        <section class="cta-section text-center light-bg">
+            <div class="container">
+                <h2>Want to Work With Us?</h2>
+                <p class="text-muted mb-4">Let's discuss your project and bring your ideas to life.</p>
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-gray-800 py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-500 text-sm">© <span data-year></span> LoopHole InfoTech. Built by the team.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; <span data-year></span> LoopHole InfoTech. Built by the team.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Nav Toggle and Footer Year -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Set current year in footer
-            const yearSpan = document.querySelector('[data-year]');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-
-            // 2. Mobile Navigation Toggle
-            const navToggle = document.querySelector('.nav-toggle');
-            const mobileNav = document.querySelector('.site-nav-mobile');
-
-            navToggle.addEventListener('click', () => {
-                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-                navToggle.setAttribute('aria-expanded', !isExpanded);
-                mobileNav.setAttribute('data-open', !isExpanded);
-            });
-        });
-    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

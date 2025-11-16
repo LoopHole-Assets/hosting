@@ -3,244 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoopHole InfoTech | Custom Web Experiences</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <!-- Load Custom Styles -->
+    <title>LoopHole InfoTech | Web Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-gray-900 text-gray-300 antialiased">
+<body class="light-mode">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-xl font-extrabold text-white tracking-wider hover:text-cyan-400 transition duration-200">LoopHole InfoTech</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">
-                    <svg id="theme-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l7 4v6l-7 4-7-4V6z"/>
+                </svg>
+                LoopHole
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle-btn">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.591-1.592a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 011.06 0l1.591 1.592a.75.75 0 01-1.06 1.06l-1.591-1.592a.75.75 0 010-1.06zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zM5.106 17.834a.75.75 0 010-1.06l1.591-1.592a.75.75 0 111.061 1.06l-1.591 1.592a.75.75 0 01-1.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zM6.106 5.106a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.06 1.061L5.106 6.166a.75.75 0 010-1.06z" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.949a.75.75 0 01.82.162 10.503 10.503 0 01-4.128 5.135A10.477 10.477 0 0112 22.5a10.5 10.5 0 01-10.5-10.5c0-4.307 2.54-7.962 6.028-9.532a.75.75 0 01.82.162z" clip-rule="evenodd" />
                     </svg>
                 </button>
-                
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html" aria-current="page" class="text-cyan-400 border-b-2 border-cyan-400 pb-2 p-2 rounded-t-lg">Home</a>
-                    <a href="services.html" class="text-gray-300 hover:text-white transition duration-200 p-2 rounded-lg">Services</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white transition duration-200 p-2 rounded-lg">About</a>
-                    <a href="team.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">Team</a>
-                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition duration-300 shadow-lg">Contact</a>
-                </nav>
+            </nav>
 
-                <!-- Mobile Toggle Button -->
-                <button class="nav-toggle md:hidden p-2" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        
-        <!-- Mobile Nav Menu (Hidden by default) -->
-        <nav class="site-nav-mobile md:hidden bg-gray-800 border-t border-gray-700" data-open="false">
-            <div class="px-4 pt-2 pb-4 space-y-2 flex flex-col">
-                <a href="index.html" aria-current="page" class="text-cyan-400 block px-3 py-2 rounded-md bg-gray-700/50">Home</a>
-                <a href="services.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">Services</a>
-                <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">About</a>
-                <a href="team.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md transition duration-200">Team</a>
-                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white text-center block px-3 py-2 rounded-md transition duration-300">Plan your project</a>
-            </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="py-20 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <!-- Hero Content -->
-                    <div class="hero-content">
-                        <div class="badge inline-flex items-center space-x-2 bg-cyan-900/40 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full mb-6">
-                            <span>01</span>
-                            <span>Year one, future ready</span>
-                        </div>
-                        <span class="hero-eyebrow block text-sm uppercase tracking-wider text-blue-400 mb-3">Custom websites for your business</span>
-                        <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                            Modern websites built with <span class="text-gradient">HTML, CSS, JS & Python</span>
-                        </h1>
-                        <p class="text-lg text-gray-400 mb-8">
-                            LoopHole InfoTech creates responsive, user-friendly websites. We offer frontend development or full-stack projects, including 1 year of maintenance.
-                        </p>
-                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <a class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-xl shadow-blue-500/30" href="#services">
-                                Explore services
-                            </a>
-                            <a class="w-full sm:w-auto bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300" href="contact.html">
-                                Plan your project
-                            </a>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">01 Year one, future ready</span>
+                <h1>WE ARE BUILDING <strong>SOFTWARE TO HELP</strong></h1>
+                <p>Create modern, responsive websites with HTML, CSS, JavaScript, and Python. Choose frontend or full-stack development with 1 year of maintenance included.</p>
+                <div class="cta-buttons">
+                    <a href="services.html" class="btn btn-primary">Explore Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="text-center">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p class="text-muted mb-4">We build modern websites using the latest technologies</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-card-icon">💻</div>
+                        <h3>Frontend Development</h3>
+                        <p>Create beautiful, responsive user interfaces with HTML, CSS, and JavaScript.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
                         </div>
                     </div>
-
-                    <!-- Hero Visual -->
-                    <div class="hero-visual p-8 rounded-2xl hidden lg:block">
-                        <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-700 pb-3">Why choose us</h2>
-                        <ul class="space-y-6">
-                            <li class="p-4">
-                                <strong class="text-xl font-semibold text-cyan-400 block mb-1">Fast delivery</strong>
-                                <p class="text-gray-400">We work efficiently to deliver your website on time.</p>
-                            </li>
-                            <li class="p-4">
-                                <strong class="text-xl font-semibold text-cyan-400 block mb-1">Modern technologies</strong>
-                                <p class="text-gray-400">Using the latest tools for responsive, fast websites.</p>
-                            </li>
-                            <li class="p-4">
-                                <strong class="text-xl font-semibold text-cyan-400 block mb-1">Ongoing support</strong>
-                                <p class="text-gray-400">1 year of maintenance to keep your site updated.</p>
-                            </li>
-                        </ul>
+                    <div class="service-card">
+                        <div class="service-card-icon">⚙️</div>
+                        <h3>Full Stack Development</h3>
+                        <p>Complete websites with frontend and backend using Python for server-side logic.</p>
+                        <div class="tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Databases</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
-
-        <!-- Services Section -->
-        <section class="services section py-20 md:py-28" id="services">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-4xl font-bold text-white mb-4">Our Services</h2>
-                    <p class="text-gray-400 text-lg">We build websites using HTML, CSS, JavaScript, and Python. Choose frontend or full-stack development with maintenance included.</p>
-                </div>
-                <div class="service-grid grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
-                    <!-- Service Card 1 -->
-                    <article class="service-card p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">Frontend Development</h3>
-                        <p class="text-gray-400 mb-4">Create beautiful, responsive user interfaces with HTML, CSS, and JavaScript.</p>
-                        <div class="service-tags flex flex-wrap gap-2 text-xs font-medium">
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">HTML</span>
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">CSS</span>
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">JavaScript</span>
-                        </div>
-                    </article>
-
-                    <!-- Service Card 2 -->
-                    <article class="service-card p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">Full Stack Development</h3>
-                        <p class="text-gray-400 mb-4">Complete websites with frontend and backend using Python for server-side logic.</p>
-                        <div class="service-tags flex flex-wrap gap-2 text-xs font-medium">
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Frontend</span>
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Databases</span>
-                        </div>
-                    </article>
-
-                </div>
-                <div class="text-center mt-12">
-                     <a class="text-cyan-400 hover:text-cyan-300 font-semibold transition duration-300 inline-flex items-center" href="services.html">
-                        View Detailed Services
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </a>
+        <!-- How It Works Section -->
+        <section class="light-bg">
+            <div class="container text-center">
+                <h2>How It Works</h2>
+                <p class="text-muted mb-4">Simple process to build your website</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Planning</h3>
+                        <p>Discuss your requirements and create a project plan.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Design</h3>
+                        <p>Create wireframes and design tailored to your needs.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Launch</h3>
+                        <p>Deploy your website and provide ongoing support.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section py-20 md:py-28 bg-gray-800 border-t border-gray-700">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="cta text-center max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-                        Ready to build your website?
-                    </h2>
-                    <p class="text-gray-400 text-lg mb-8">
-                        Contact us to discuss your project. We'll create a plan that fits your needs and budget.
-                    </p>
-                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-xl shadow-blue-500/50" href="contact.html">
-                        Start the conversation
-                    </a>
-                </div>
+        <section class="cta-section text-center">
+            <div class="container">
+                <h2>Ready to Build Your Website?</h2>
+                <p class="text-muted mb-4">Let's discuss your project and create something amazing together.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-gray-800 py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-500 text-sm">© <span data-year></span> LoopHole InfoTech. Crafted with care for digital-first teams.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; <span data-year"></span> LoopHole InfoTech. Built by the team.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Dynamic Interactions -->
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Set current year in footer
-            const yearSpan = document.querySelector('[data-year]');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-
-            // 2. Mobile Navigation Toggle
-            const navToggle = document.querySelector('.nav-toggle');
-            const mobileNav = document.querySelector('.site-nav-mobile');
-
-            navToggle.addEventListener('click', () => {
-                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-                navToggle.setAttribute('aria-expanded', !isExpanded);
-                mobileNav.setAttribute('data-open', !isExpanded);
-            });
-
-            // 3. Metric Counter Animation on Scroll (Intersection Observer)
-            const metricValues = document.querySelectorAll('.metric-value');
-            let animationStarted = false;
-
-            const startCountAnimation = (targetElement, duration = 2000) => {
-                const targetValue = parseInt(targetElement.getAttribute('data-target'));
-                const start = 0;
-                let startTime = null;
-
-                const step = (timestamp) => {
-                    if (!startTime) startTime = timestamp;
-                    const progress = timestamp - startTime;
-                    const percentage = Math.min(progress / duration, 1);
-                    const currentValue = Math.floor(percentage * targetValue);
-                    
-                    let displayValue = currentValue;
-                    if (targetElement.textContent.includes('%')) {
-                        displayValue = currentValue + '%';
-                    }
-
-                    targetElement.textContent = displayValue;
-
-                    if (percentage < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-
-                window.requestAnimationFrame(step);
-            };
-
-            const observerCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !animationStarted) {
-                        metricValues.forEach(startCountAnimation);
-                        animationStarted = true; // Ensure it only runs once
-                        observer.unobserve(entry.target);
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(observerCallback, {
-                threshold: 0.5 // Trigger when 50% of the section is visible
-            });
-
-            const metricsSection = document.querySelector('.metrics.section');
-            if (metricsSection) {
-                observer.observe(metricsSection);
-            }
-        });
-    </script>
 </body>
 </html>
