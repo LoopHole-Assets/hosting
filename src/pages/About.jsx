@@ -68,26 +68,26 @@ export default function About() {
             <h2 className="text-center">What Drives Us</h2>
             <p className="text-muted text-center mb-4">Our work ethic defined by core principles</p>
             <motion.div 
-              className="grid-3"
+              className="features-grid"
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={stagger}
             >
-              <motion.div className="card" variants={fadeInUp}>
-                <div className="service-card-icon"><i className="fa-solid fa-lightbulb"></i></div>
+              <motion.div className="feature-card" variants={fadeInUp}>
+                <div className="feature-icon"><i className="fa-solid fa-lightbulb"></i></div>
                 <h3>Innovation</h3>
-                <p className="text-muted">Stay updated with new technologies to build better websites.</p>
+                <p>Stay updated with new technologies to build better websites.</p>
               </motion.div>
-              <motion.div className="card" variants={fadeInUp}>
-                <div className="service-card-icon"><i className="fa-solid fa-handshake"></i></div>
+              <motion.div className="feature-card" variants={fadeInUp}>
+                <div className="feature-icon"><i className="fa-solid fa-handshake"></i></div>
                 <h3>Collaboration</h3>
-                <p className="text-muted">Work closely with clients to understand their needs.</p>
+                <p>Work closely with clients to understand their needs.</p>
               </motion.div>
-              <motion.div className="card" variants={fadeInUp}>
-                <div className="service-card-icon"><i className="fa-solid fa-star"></i></div>
+              <motion.div className="feature-card" variants={fadeInUp}>
+                <div className="feature-icon"><i className="fa-solid fa-star"></i></div>
                 <h3>Excellence</h3>
-                <p className="text-muted">Deliver high-quality work that exceeds expectations.</p>
+                <p>Deliver high-quality work that exceeds expectations.</p>
               </motion.div>
             </motion.div>
           </div>

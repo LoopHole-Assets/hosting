@@ -21,22 +21,31 @@ export default function Home() {
       transition={{ duration: 0.4 }}
     >
       <section className="hero">
+        <div className="hero-bg">
+          <div className="hero-gradient"></div>
+          <div className="hero-grid"></div>
+          <div className="hero-glow hero-glow-1"></div>
+          <div className="hero-glow hero-glow-2"></div>
+          <div className="hero-glow hero-glow-3"></div>
+        </div>
         <motion.div 
           className="hero-content"
           initial="initial"
           animate="animate"
           variants={stagger}
         >
-          <motion.span className="hero-badge" variants={fadeInUp}>
+          <motion.div className="hero-badge" variants={fadeInUp}>
+            <span className="badge-dot"></span>
             Year one, future ready
-          </motion.span>
+          </motion.div>
           <motion.h1 variants={fadeInUp}>
-            We Build <strong>Digital Experiences</strong>
+            We Build <span className="gradient-text">Digital</span><br />
+            <span className="gradient-text">Experiences</span>
           </motion.h1>
           <motion.p variants={fadeInUp}>
             Modern, responsive websites crafted with precision. From frontend to full-stack solutions with 1 year of dedicated support.
           </motion.p>
-          <motion.div className="cta-buttons" variants={fadeInUp}>
+          <motion.div className="hero-buttons" variants={fadeInUp}>
             <Link to="/services" className="btn btn-primary">
               Explore Services <i className="fa-solid fa-arrow-right"></i>
             </Link>

@@ -59,17 +59,17 @@ export default function Team() {
           >
             {team.map((member, i) => (
               <motion.div className="team-card" key={i} variants={fadeInUp}>
-                <div className="team-avatar">
+                <div className="team-card-image">
                   {member.img ? (
                     <img src={member.img} alt={member.name} />
                   ) : (
-                    <div className="avatar-placeholder">
+                    <div className="team-card-placeholder">
                       <i className="fa-solid fa-user"></i>
                     </div>
                   )}
                 </div>
                 <h3>{member.name}</h3>
-                <p className="team-role">{member.role}</p>
+                <p className="role">{member.role}</p>
               </motion.div>
             ))}
           </motion.div>
