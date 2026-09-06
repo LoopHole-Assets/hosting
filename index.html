@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Unique title & description for the homepage -->
+    <title>Loophole InfoTech | Smart Software &amp; SaaS Solutions from Nepal</title>
+    <meta name="description" content="Loophole InfoTech builds practical software for growing businesses — HMS for hotels, RMS for restaurants, Retail RMS for stores, plus custom SaaS, web and mobile apps. Made in Kathmandu, Nepal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/companylogo.jpg">
+    <style>
+    /* ============================================================
+       Loophole InfoTech — Shared Design System
+       Font: Plus Jakarta Sans | Primary: #2563EB
+       ============================================================ */
+    :root{
+        --primary:#2563EB;
+        --primary-dark:#1D4ED8;
+        --primary-light:#EFF6FF;
+        --dark:#0F172A;
+        --text:#475569;
+        --muted:#64748B;
+        --light:#F8FAFC;
+        --border:#E2E8F0;
+        --white:#FFFFFF;
+        --whatsapp:#25D366;
+        --radius:14px;
+        --radius-lg:22px;
+        --shadow-sm:0 1px 3px rgba(15,23,42,.06);
+        --shadow:0 12px 32px -14px rgba(15,23,42,.16);
+        --shadow-lg:0 26px 60px -22px rgba(15,23,42,.24);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.75;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit;transition:color .2s ease}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5,h6{color:var(--dark);font-weight:800;letter-spacing:-.015em;line-height:1.25}
+    .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+    section{padding:96px 0}
+
+    /* ---- Section headers ---- */
+    .section-head{max-width:700px;margin:0 auto 56px;text-align:center}
+    .section-tag{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:var(--primary-light);border:1px solid #DBEAFE;padding:6px 15px;border-radius:999px;margin-bottom:18px}
+    .section-title{font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px}
+    .section-sub{font-size:1.05rem;color:var(--muted)}
+
+    /* ---- Buttons ---- */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:.97rem;font-family:inherit;cursor:pointer;border:2px solid transparent;transition:all .25s ease;line-height:1.25;white-space:nowrap}
+    .btn svg{flex:none}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 20px -8px rgba(37,99,235,.5)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(37,99,235,.55)}
+    .btn-outline{border-color:var(--border);color:var(--dark);background:var(--white)}
+    .btn-outline:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+    .btn-white{background:#fff;color:var(--primary-dark)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(2,6,23,.4)}
+    .btn-ghost-white{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+    .btn-ghost-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+    .btn-sm{padding:10px 20px;font-size:.88rem;border-radius:10px}
+
+    /* ---- Navbar ---- */
+    .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+    .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.2rem;color:var(--dark);letter-spacing:-.02em}
+    .logo .logo-mark{flex:none}
+    .logo-image{width:36px;height:36px;object-fit:contain;border-radius:10px;flex:none}
+    .logo span{color:var(--primary)}
+    .nav-links{display:flex;align-items:center;gap:4px}
+    .nav-links a{padding:10px 15px;border-radius:10px;font-weight:600;font-size:.94rem;color:var(--text)}
+    .nav-links a:hover{color:var(--primary);background:var(--primary-light)}
+    .nav-links a.active{color:var(--primary);background:var(--primary-light)}
+    .nav-cta{flex:none}
+    .nav-drawer-cta{display:none}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:none;background:transparent;cursor:pointer;padding:10px;border-radius:10px}
+    .hamburger span{display:block;height:2.5px;width:100%;background:var(--dark);border-radius:4px;transition:all .3s ease}
+    .hamburger.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+    /* ---- Footer ---- */
+    footer{background:var(--light);border-top:1px solid var(--border);padding:72px 0 0}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:56px}
+    .footer-brand p{font-size:.95rem;margin:16px 0 22px;max-width:320px}
+    .footer-tagline{font-weight:700;color:var(--dark)}
+    .socials{display:flex;gap:10px}
+    .socials a{width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);transition:all .25s ease}
+    .socials a:hover{background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-3px)}
+    .footer-col h4{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dark);margin-bottom:20px}
+    .footer-col ul li{margin-bottom:11px}
+    .footer-col ul a{font-size:.94rem;color:var(--muted)}
+    .footer-col ul a:hover{color:var(--primary)}
+    .footer-contact li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;color:var(--muted);margin-bottom:13px}
+    .footer-contact svg{flex:none;margin-top:4px;color:var(--primary)}
+    .footer-bottom{border-top:1px solid var(--border);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .footer-bottom p{font-size:.88rem;color:var(--muted)}
+    .footer-bottom .made{font-size:.88rem;color:var(--muted)}
+    .footer-bottom .made strong{color:var(--dark)}
+
+    /* ---- WhatsApp floating button ---- */
+    .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:1100;width:58px;height:58px;border-radius:50%;background:var(--whatsapp);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:transform .25s ease,box-shadow .25s ease}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 16px 34px rgba(37,211,102,.55)}
+    .wa-tooltip{position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);background:var(--dark);color:#fff;font-size:.8rem;font-weight:600;padding:8px 14px;border-radius:9px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s ease}
+    .whatsapp-float:hover .wa-tooltip{opacity:1}
+
+    /* ---- Reveal on scroll ---- */
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+    /* ---- Hero ---- */
+    .hero{position:relative;padding:84px 0 100px;background:radial-gradient(1100px 540px at 88% -12%,#EFF6FF 0%,transparent 62%),radial-gradient(820px 460px at -12% 112%,#EFF6FF 0%,transparent 56%),#fff;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #BFDBFE;color:var(--primary-dark);font-size:.83rem;font-weight:700;padding:8px 16px;border-radius:999px;box-shadow:var(--shadow-sm)}
+    .hero-badge .dot-live{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+    .hero h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.12;margin:24px 0 20px}
+    .hero h1 .accent{color:var(--primary)}
+    .hero-sub{font-size:1.13rem;color:var(--text);max-width:545px;margin-bottom:34px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+    .hero-trust{display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted)}
+    .trust-stars{color:#F59E0B;letter-spacing:2px;font-size:.95rem}
+
+    /* ---- Hero CSS dashboard mockup ---- */
+    .dash{position:relative}
+    .dash-window{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow-lg);overflow:hidden}
+    .dash-top{display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid var(--border);background:var(--light)}
+    .dash-top .dot{width:10px;height:10px;border-radius:50%}
+    .dot-r{background:#FCA5A5}.dot-y{background:#FCD34D}.dot-g{background:#86EFAC}
+    .dash-top .url{margin-left:10px;flex:1;background:#fff;border:1px solid var(--border);border-radius:8px;font-size:.68rem;color:var(--muted);padding:4px 12px;font-weight:600}
+    .dash-body{display:grid;grid-template-columns:148px 1fr;min-height:330px}
+    .dash-side{border-right:1px solid var(--border);padding:16px 13px;display:flex;flex-direction:column;gap:6px;background:#fff}
+    .side-item{font-size:.7rem;font-weight:600;color:var(--muted);padding:7px 11px;border-radius:8px}
+    .side-item.on{background:var(--primary-light);color:var(--primary)}
+    .dash-main{padding:18px;background:linear-gradient(180deg,#FBFDFF,#F5F9FF)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+    .kpi{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 13px}
+    .kpi small{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700}
+    .kpi strong{display:block;font-size:1.12rem;color:var(--dark);margin-top:3px;letter-spacing:-.02em}
+    .kpi .up{font-size:.62rem;color:#16A34A;font-weight:700}
+    .chart-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 16px 12px}
+    .chart-box small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    .bars{display:flex;align-items:flex-end;gap:9px;height:104px}
+    .bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#60A5FA,#2563EB);transform-origin:bottom;animation:grow 1s ease both}
+    .bar.alt{background:linear-gradient(180deg,#E2E8F0,#CBD5E1)}
+    .bar:nth-child(2){animation-delay:.08s}.bar:nth-child(3){animation-delay:.16s}.bar:nth-child(4){animation-delay:.24s}.bar:nth-child(5){animation-delay:.32s}.bar:nth-child(6){animation-delay:.4s}.bar:nth-child(7){animation-delay:.48s}.bar:nth-child(8){animation-delay:.56s}
+    @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    .float-chip{position:absolute;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-lg);padding:12px 16px;display:flex;gap:12px;align-items:center;animation:floaty 5.5s ease-in-out infinite}
+    .float-chip .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;flex:none}
+    .ic-green{background:#DCFCE7;color:#16A34A}
+    .ic-blue{background:var(--primary-light);color:var(--primary)}
+    .float-chip b{display:block;font-size:.8rem;color:var(--dark);line-height:1.35}
+    .float-chip small{font-size:.7rem;color:var(--muted)}
+    .chip-1{top:5%;right:-3%}
+    .chip-2{bottom:9%;left:-6%;animation-delay:1.4s}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+    /* ---- Who we are ---- */
+    .who-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .who-text h2{margin-bottom:18px}
+    .who-text p{margin-bottom:16px}
+    .who-points{margin-top:22px;display:grid;gap:12px}
+    .who-points li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem}
+    .who-points svg{flex:none;margin-top:4px;color:var(--primary)}
+    .who-card{background:linear-gradient(150deg,var(--dark) 0%,#1E293B 100%);border-radius:var(--radius-lg);padding:40px 38px;color:#CBD5E1;box-shadow:var(--shadow-lg)}
+    .who-card h3{color:#fff;font-size:1.3rem;margin-bottom:8px}
+    .who-card .num-row{display:grid;grid-template-columns:1fr 1fr;gap:26px 20px;margin-top:26px}
+    .who-card .num strong{display:block;font-size:2rem;color:#fff;letter-spacing:-.02em}
+    .who-card .num span{font-size:.85rem}
+    .who-card .num{border-left:3px solid var(--primary);padding-left:14px}
+
+    /* ---- Products section ---- */
+    .products{background:var(--light)}
+    .product-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s ease,box-shadow .3s ease;margin-bottom:48px}
+    .product-card:last-of-type{margin-bottom:0}
+    .product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .product-card:nth-of-type(even) .product-media{order:2}
+    .product-media{position:relative;min-height:100%;overflow:hidden;background:linear-gradient(145deg,#EFF6FF 0%,#F8FAFC 55%,#E0ECFF 100%);display:flex;align-items:center;justify-content:center;align-self:stretch}
+    .product-media::after{content:"";position:absolute;inset:20px;border:1px solid rgba(37,99,235,.12);border-radius:18px;pointer-events:none}
+    .product-media img{position:relative;z-index:1;width:100%;height:100%;padding:28px;object-fit:contain;object-position:center;transition:transform .6s ease}
+    .product-card:hover .product-media img{transform:scale(1.035)}
+    .product-badge{position:absolute;z-index:2;top:16px;left:16px;background:rgba(15,23,42,.8);backdrop-filter:blur(6px);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;padding:7px 15px;border-radius:999px}
+    .product-body{display:flex;flex-direction:column;justify-content:center;padding:40px 44px 44px}
+    .product-title-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+    .product-abbr{background:var(--primary);color:#fff;font-weight:800;padding:4px 13px;border-radius:9px;font-size:1rem;letter-spacing:.03em}
+    .product-card h3{font-size:1.55rem}
+    .product-tagline{color:var(--primary);font-weight:700;font-size:.98rem;margin-bottom:12px}
+    .product-desc{max-width:780px;margin-bottom:26px}
+    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px;margin-bottom:28px}
+    .feat{display:flex;gap:10px;align-items:flex-start;font-size:.94rem;font-weight:500;color:var(--text)}
+    .feat svg{flex:none;width:19px;height:19px;color:var(--primary);margin-top:4px}
+    .builtfor{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:18px 0;border-top:1px dashed var(--border);margin-bottom:26px}
+    .builtfor-label{font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+    .pill{background:var(--light);border:1px solid var(--border);padding:6px 15px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--dark)}
+    .product-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:auto}
+    .products-note{text-align:center;margin-top:40px;font-size:.95rem;color:var(--muted)}
+    .products-note a{color:var(--primary);font-weight:700}
+
+    /* ---- Comparison table ---- */
+    .compare-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-sm);-webkit-overflow-scrolling:touch}
+    table.compare{width:100%;border-collapse:collapse;min-width:760px}
+    .compare th,.compare td{padding:17px 24px;text-align:center;border-bottom:1px solid var(--border);font-size:.94rem}
+    .compare th:first-child,.compare td:first-child{text-align:left;font-weight:700;color:var(--dark)}
+    .compare thead th{background:var(--dark);color:#fff;font-weight:700;font-size:.98rem;border-bottom:none}
+    .compare thead th small{display:block;color:#94A3B8;font-weight:600;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+    .compare tbody tr:nth-child(even){background:var(--light)}
+    .compare tbody tr:hover{background:var(--primary-light)}
+    .compare tbody tr:last-child td{border-bottom:none}
+    .tick{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#DCFCE7;color:#16A34A}
+    .tick svg{width:14px;height:14px}
+    .no-x{color:#CBD5E1;font-weight:800}
+    .opt-pill{display:inline-block;font-size:.74rem;font-weight:700;color:#B45309;background:#FEF3C7;padding:3px 12px;border-radius:999px}
+    .compare-note{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:18px;font-size:.87rem;color:var(--muted)}
+    .compare-note span{display:inline-flex;align-items:center;gap:8px}
+
+    @media (max-width:1200px) and (min-width:901px){
+        .nav-inner{gap:12px}
+        .logo{gap:8px;font-size:1.08rem}
+        .nav-links a{padding-left:10px;padding-right:10px;font-size:.88rem}
+        .nav-cta{padding-left:15px;padding-right:15px}
+    }
+
+    /* ---- Services snapshot ---- */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:34px 30px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+    .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#BFDBFE}
+    .svc-icon{width:56px;height:56px;border-radius:14px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;margin-bottom:20px}
+    .svc-card h3{font-size:1.18rem;margin-bottom:10px}
+    .svc-card p{font-size:.94rem}
+    .services-more{text-align:center;margin-top:44px}
+
+    /* ---- Why Loophole ---- */
+    .why{background:var(--light)}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+    .why-item .why-icon{width:52px;height:52px;border-radius:14px;background:var(--primary);color:#fff;display:grid;place-items:center;margin-bottom:20px;box-shadow:0 10px 22px -8px rgba(37,99,235,.5)}
+    .why-item h3{font-size:1.2rem;margin-bottom:12px}
+    .why-item p{font-size:.95rem}
+
+    /* ---- Benefits ---- */
+    .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .benefit{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px;transition:transform .3s ease,box-shadow .3s ease}
+    .benefit:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .benefit .b-icon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center}
+    .benefit h3{font-size:1.12rem;margin-bottom:8px}
+    .benefit p{font-size:.94rem}
+
+    /* ---- Testimonials preview ---- */
+    .t-preview{background:var(--light)}
+    .t-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow-sm);transition:transform .3s ease,box-shadow .3s ease;position:relative}
+    .t-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .t-quote-ic{width:42px;height:42px;border-radius:12px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;margin-bottom:18px}
+    .t-stars{color:#F59E0B;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+    .t-text{font-size:1rem;margin-bottom:24px}
+    .t-person{display:flex;gap:14px;align-items:center}
+    .t-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#1D4ED8);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.92rem;flex:none}
+    .t-name{font-weight:800;color:var(--dark);font-size:.97rem;line-height:1.3}
+    .t-role{font-size:.84rem;color:var(--muted)}
+    .testimonials-more{text-align:center;margin-top:44px}
+
+    /* ---- CEO section ---- */
+    .ceo{background:var(--light)}
+    .ceo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+    .ceo-photo{position:relative;max-width:320px;margin:0 auto;padding:14px}
+    .ceo-photo::before{display:none}
+    .ceo-photo::after{content:"";position:absolute;inset:0;border:1px solid #BFDBFE;border-radius:50%;background:linear-gradient(145deg,#EFF6FF,#DBEAFE);z-index:0}
+    .ceo-photo img{position:relative;z-index:1;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:8px solid #fff;box-shadow:var(--shadow-lg)}
+    .ceo-exp{position:absolute;z-index:2;right:-8px;bottom:14px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:10px 16px;text-align:center}
+    .ceo-exp strong{display:block;font-size:1.3rem;color:var(--primary);letter-spacing:-.02em}
+    .ceo-exp span{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+    .ceo-quote-ic{width:46px;height:46px;border-radius:12px;background:var(--primary);color:#fff;display:grid;place-items:center;margin-bottom:22px;box-shadow:0 10px 22px -8px rgba(37,99,235,.5)}
+    .ceo blockquote{font-size:1.32rem;line-height:1.55;color:var(--dark);font-weight:600;letter-spacing:-.01em;margin-bottom:24px}
+    .ceo-bio{margin-bottom:16px;max-width:600px}
+    .ceo-name{font-weight:800;font-size:1.12rem;color:var(--dark)}
+    .ceo-role{color:var(--primary);font-weight:700;font-size:.92rem;margin-bottom:6px}
+
+    /* ---- CTA ---- */
+    .cta{background:linear-gradient(135deg,#2E6BF0 0%,var(--primary-dark) 100%);position:relative;overflow:hidden;padding:100px 0}
+    .cta::before,.cta::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+    .cta::before{width:420px;height:420px;top:-190px;right:-120px}
+    .cta::after{width:320px;height:320px;bottom:-170px;left:-100px}
+    .cta-inner{position:relative;z-index:1;text-align:center}
+    .cta h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:18px}
+    .cta p{color:rgba(255,255,255,.88);max-width:660px;margin:0 auto 36px;font-size:1.08rem}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    /* ---- Responsive ---- */
+    @media (max-width:1024px){
+        .hero-grid{gap:44px}
+        .chip-1{right:0}.chip-2{left:0}
+        .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+        .product-body{padding:34px 32px 36px}
+        .product-card h3{font-size:1.35rem}
+    }
+    @media (max-width:900px){
+        .hamburger{display:flex}
+        .nav-links{position:fixed;top:76px;left:0;right:0;max-height:calc(100vh - 76px);overflow-y:auto;background:#fff;flex-direction:column;align-items:stretch;padding:18px 24px 26px;gap:4px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);transform:translateY(-130%);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease;z-index:999}
+        .nav-links.active{transform:none;opacity:1;pointer-events:auto}
+        .nav-links a{padding:13px 14px;font-size:1rem}
+        .nav-cta{display:none}
+        .nav-links a.nav-drawer-cta{display:inline-flex;justify-content:center;width:100%;margin-top:10px;padding:13px 20px}
+        .hero{padding:64px 0 84px}
+        .hero-grid{grid-template-columns:1fr;gap:56px}
+        .hero-sub{max-width:100%}
+        .who-grid{grid-template-columns:1fr;gap:48px}
+        .ceo-grid{grid-template-columns:1fr;gap:60px}
+        .ceo-photo{max-width:360px}
+    }
+    @media (max-width:768px){
+        section{padding:76px 0}
+        .grid-3{grid-template-columns:1fr}
+        .t-preview .grid-3{grid-template-columns:1fr !important}
+        .why-grid{grid-template-columns:1fr;gap:36px}
+        .benefits-grid{grid-template-columns:1fr}
+        .product-card,.product-card:nth-of-type(even){display:flex;flex-direction:column}
+        .product-card:nth-of-type(even) .product-media{order:0}
+        .product-media{aspect-ratio:16/9;min-height:0;border-bottom:1px solid var(--border)}
+        .product-media img{padding:0;object-fit:cover;object-position:center top}
+        .features-grid{grid-template-columns:1fr;gap:8px}
+        .product-body{padding:30px 26px 34px}
+        .kpis{grid-template-columns:repeat(2,1fr)}
+        .dash-side{display:none}
+        .dash-body{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+        .hero-actions .btn{width:100%}
+        .product-actions .btn{width:100%}
+        .float-chip{display:none}
+        .footer-grid{grid-template-columns:1fr}
+        .cta-actions .btn{width:100%}
+        .who-card .num-row{grid-template-columns:1fr}
+    }
+    </style>
+</head>
+<body>
+<!-- ================= Navbar ================= -->
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo" aria-label="Loophole InfoTech — Home">
+            <img class="logo-image" src="images/companylogo.jpg" alt="Loophole InfoTech logo">
+            Loophole&nbsp;<span>InfoTech</span>
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm nav-drawer-cta">Get Started</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ================= Hero Section ================= -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <h1>Smart software for businesses that want to <span class="accent">grow</span></h1>
+            <p class="hero-sub">We don't just build websites. We build software that helps businesses manage operations, save time, understand their data, and grow.</p>
+            <div class="hero-actions">
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    Explore Our Products
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Let's Talk</a>
+            </div>
+            <p class="hero-trust"><span class="trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Trusted by 30+ hotels, restaurants &amp; stores across Nepal</p>
+        </div>
+
+        <!-- Pure CSS dashboard illustration -->
+        <div class="dash" aria-hidden="true">
+            <div class="dash-window">
+                <div class="dash-top">
+                    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                    <span class="url">app.loopholeinfotech.com/dashboard</span>
+                </div>
+                <div class="dash-body">
+                    <div class="dash-side">
+                        <span class="side-item on">Dashboard</span>
+                        <span class="side-item">Reservations</span>
+                        <span class="side-item">POS &amp; Billing</span>
+                        <span class="side-item">Inventory</span>
+                        <span class="side-item">Reports</span>
+                        <span class="side-item">Settings</span>
+                    </div>
+                    <div class="dash-main">
+                        <div class="kpis">
+                            <div class="kpi"><small>Today's Sales</small><strong>Rs 84,250</strong><span class="up">â–² 12%</span></div>
+                            <div class="kpi"><small>Orders</small><strong>132</strong><span class="up">â–² 8%</span></div>
+                            <div class="kpi"><small>Occupancy</small><strong>87%</strong><span class="up">â–² 5%</span></div>
+                        </div>
+                        <div class="chart-box">
+                            <small>Revenue — Last 8 Weeks</small>
+                            <div class="bars">
+                                <div class="bar alt" style="height:38%"></div>
+                                <div class="bar" style="height:52%"></div>
+                                <div class="bar alt" style="height:44%"></div>
+                                <div class="bar" style="height:64%"></div>
+                                <div class="bar" style="height:58%"></div>
+                                <div class="bar" style="height:78%"></div>
+                                <div class="bar alt" style="height:66%"></div>
+                                <div class="bar" style="height:92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="float-chip chip-1">
+                <span class="ic ic-green">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                <span><b>New booking received</b><small>Deluxe Room Â· 2 nights</small></span>
+            </div>
+            <div class="float-chip chip-2">
+                <span class="ic ic-blue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                </span>
+                <span><b>Revenue up 32%</b><small>compared to last month</small></span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= Who We Are ================= -->
+<section class="who">
+    <div class="container who-grid">
+        <div class="who-text reveal">
+            <span class="section-tag">Who We Are</span>
+            <h2>A software team that understands business, not just code</h2>
+            <p>Loophole InfoTech is a software development company and SaaS product maker based in Kathmandu, Nepal. We work with hotels, restaurants, retail stores, and service businesses that want to spend less time on paperwork and more time serving their customers.</p>
+            <p>Our journey started with a simple observation: most businesses in Nepal were running on registers, spreadsheets, and guesswork. So we built software that replaces the chaos with clarity — tools that handle daily operations, keep records clean, and show owners exactly what's happening in their business.</p>
+            <ul class="who-points">
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    Ready-made products you can start using within days, not months
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    Custom software designed around the way your business actually works
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    Ongoing support from a team that answers when you call
+                </li>
+            </ul>
+        </div>
+        <div class="who-card reveal">
+            <h3>Loophole InfoTech in numbers</h3>
+            <p>Every project we ship adds to a simple goal: software that pays for itself by saving time and preventing losses.</p>
+            <div class="num-row">
+                <div class="num"><strong>20+</strong><span>Projects delivered</span></div>
+                <div class="num"><strong>20+</strong><span>Happy clients</span></div>
+                <div class="num"><strong>2+</strong><span>Years of experience</span></div>
+                <div class="num"><strong>3</strong><span>Flagship products</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Products Section ================= -->
+<section class="products" id="products">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Our Products</span>
+            <h2 class="section-title">Ready-made software, built for real operations</h2>
+            <p class="section-sub">Three products born from working closely with businesses like yours. Pick the one that fits — we'll set it up, train your team, and stay with you as you grow.</p>
+        </div>
+        <!-- RMS Product (Retail Management System) -->
+        <article class="product-card reveal">
+            <div class="product-media">
+                <span class="product-badge">Retail Software</span>
+                <img src="images/rms-retail.jpg" alt="RMS — Retail Management System dashboard showing products, stock units, purchases, sales and inventory valuation" loading="lazy">
+            </div>
+            <div class="product-body">
+                <div class="product-title-row">
+                    <span class="product-abbr">RMS</span>
+                    <h3>Retail Management System</h3>
+                </div>
+                <p class="product-tagline">Know your stock, control your costs, and sell with confidence — every single day.</p>
+                <p class="product-desc">Our Retail Management System gives shop owners a live picture of their business: what's on the shelf, what's moving fast, what's running low, and what each item is truly worth. Purchases, supplier dues, damaged stock, and expenses all live in one place — so you stop losing money to stock-outs, over-ordering, and untracked leakage.</p>
+                <div class="features-grid">
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>POS Billing</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Stock Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Low Stock Alerts</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Purchase Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Supplier Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Product Variants</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Damaged Stock Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Stock Movement History</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Supplier Payables</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sales &amp; Inventory Reports</span>
+                </div>
+                <div class="builtfor">
+                    <span class="builtfor-label">Built for:</span>
+                    <span class="pill">Retail Stores</span>
+                    <span class="pill">Distributors</span>
+                    <span class="pill">Wholesalers</span>
+                    <span class="pill">Supermarkets</span>
+                </div>
+                <div class="product-actions">
+                    <a href="contact.html?product=retail" class="btn btn-primary">Talk About Your Requirements</a>
+                    <a href="contact.html?product=retail" class="btn btn-outline">Ask About Pricing</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- HMS Product -->
+        <article class="product-card reveal">
+            <div class="product-media">
+                <span class="product-badge">Hospitality Software</span>
+                <img src="images/hms.jpg" alt="HMS — Hotel Management System dashboard showing occupancy, arrivals, departures and revenue at a glance" loading="lazy">
+            </div>
+            <div class="product-body">
+                <div class="product-title-row">
+                    <span class="product-abbr">HMS</span>
+                    <h3>Hotel Management System</h3>
+                </div>
+                <p class="product-tagline">Run your entire hotel — front desk to back office — from one clean dashboard.</p>
+                <p class="product-desc">HMS takes care of the daily rush that hotels know too well: bookings, check-ins, housekeeping schedules, restaurant orders, and bills. Everything is connected, so your front desk never has to juggle registers or chase paperwork again. Managers get live numbers on occupancy and revenue without waiting for end-of-month reports.</p>
+                <div class="features-grid">
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Reservation Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Room &amp; Availability Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Check-in &amp; Check-out</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Guest Folio &amp; Billing</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Housekeeping Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Restaurant POS &amp; KOT</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Inventory Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Revenue &amp; Expense Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Role-Based Access</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Reports &amp; Analytics</span>
+                </div>
+                <div class="builtfor">
+                    <span class="builtfor-label">Built for:</span>
+                    <span class="pill">Hotels</span>
+                    <span class="pill">Resorts</span>
+                    <span class="pill">Lodges</span>
+                </div>
+                <div class="product-actions">
+                    <a href="contact.html?product=hms" class="btn btn-primary">Book a Free Demo</a>
+                    <a href="contact.html?product=hms" class="btn btn-outline">Ask About Pricing</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- RMS Product (Restaurant Management System) -->
+        <article class="product-card reveal">
+            <div class="product-media">
+                <span class="product-badge">Restaurant Software</span>
+                <img src="images/rms-restaurant.png" alt="RMS — Restaurant Management System with POS ordering screen, menu items and Send to KOT button" loading="lazy">
+            </div>
+            <div class="product-body">
+                <div class="product-title-row">
+                    <span class="product-abbr">RMS</span>
+                    <h3>Restaurant Management System</h3>
+                </div>
+                <p class="product-tagline">From table order to kitchen ticket to final bill — fast, accurate, and stress-free.</p>
+                <p class="product-desc">RMS keeps your restaurant moving during the busiest hours. Waiters punch in orders that reach the kitchen instantly as KOTs, the POS prints clean bills, and every plate sold is deducted from stock automatically. At closing time, you don't recount the day from memory — your sales, expenses, and best-selling items are already on the dashboard.</p>
+                <div class="features-grid">
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>POS Billing</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dine-in Orders</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Takeaway Orders</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Kitchen Order Tickets (KOT)</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Table Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Inventory Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Product &amp; Menu Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Supplier Management</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sales Reports</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Expense Tracking</span>
+                    <span class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Roles &amp; Permissions</span>
+                </div>
+                <div class="builtfor">
+                    <span class="builtfor-label">Built for:</span>
+                    <span class="pill">Restaurants</span>
+                    <span class="pill">CafÃ©s</span>
+                    <span class="pill">Quick-Service Kitchens</span>
+                </div>
+                <div class="product-actions">
+                    <a href="contact.html?product=rms" class="btn btn-primary">Book a Free Demo</a>
+                    <a href="contact.html?product=rms" class="btn btn-outline">Ask About Pricing</a>
+                </div>
+            </div>
+        </article>
+
+        
+
+        <p class="products-note">Need something tailored? Every product can be customized — or we can build your idea from scratch. <a href="services.html">See our custom development services â†’</a></p>
+    </div>
+</section>
+
+<!-- ================= Product Comparison ================= -->
+<section class="compare" id="compare">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Quick Comparison</span>
+            <h2 class="section-title">Which product fits your business?</h2>
+            <p class="section-sub">A side-by-side look at what each system covers, so you can choose with confidence.</p>
+        </div>
+        <div class="compare-wrap reveal">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>HMS<small>Hotel</small></th>
+                        <th>RMS<small>Restaurant</small></th>
+                        <th>RMS<small>Retail</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reservations &amp; Room Management</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="no-x">—</span></td>
+                        <td><span class="no-x">—</span></td>
+                    </tr>
+                    <tr>
+                        <td>POS Billing</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                    <tr>
+                        <td>KOT &amp; Table Management</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="no-x">—</span></td>
+                    </tr>
+                    <tr>
+                        <td>Inventory Tracking</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                    <tr>
+                        <td>Supplier Management</td>
+                        <td><span class="opt-pill">Optional</span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                    <tr>
+                        <td>Expense Tracking</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                    <tr>
+                        <td>Reports &amp; Analytics</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                    <tr>
+                        <td>Role-Based Access</td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                        <td><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="compare-note">
+            <span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Included</span>
+            <span><span class="opt-pill">Optional</span> Available as an add-on</span>
+            <span><span class="no-x">—</span> Not applicable</span>
+        </div>
+    </div>
+</section>
+<!-- ================= Services Snapshot ================= -->
+<section class="services-snap">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Services that take you beyond off-the-shelf</h2>
+            <p class="section-sub">When your business needs something the ready products don't cover, our team designs and builds it with you.</p>
+        </div>
+        <div class="grid-3">
+            <div class="svc-card reveal">
+                <span class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M5 21h14"/><path d="M8 11l-2 2 2 2M16 11l2 2-2 2M13 10l-2 6"/></svg></span>
+                <h3>Web Development</h3>
+                <p>Professional, responsive websites and web applications that help your business reach customers and work smoothly on every device.</p>
+            </div>
+            <div class="svc-card reveal">
+                <span class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/><path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.8a2 2 0 002-1.6L21 8H6"/></svg></span>
+                <h3>E-commerce Solutions</h3>
+                <p>Sell online with secure storefronts, product catalogs, payments, order tracking, and simple management tools.</p>
+            </div>
+            <div class="svc-card reveal">
+                <span class="svc-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/><path d="M8 15l-2-3 2-3M16 15l2-3-2-3"/></svg>
+                </span>
+                <h3>Web &amp; Mobile Applications</h3>
+                <p>Fast, reliable web platforms and mobile apps built around your workflow — booking systems, delivery apps, internal tools, and customer portals that people actually enjoy using.</p>
+            </div>
+        </div>
+        <div class="services-more reveal">
+            <a href="services.html" class="btn btn-outline">View All Services
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Why Loophole ================= -->
+<section class="why">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Why Loophole</span>
+            <h2 class="section-title">Why businesses choose to work with us</h2>
+            <p class="section-sub">Three principles guide every line of code we write and every conversation we have.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-item reveal">
+                <span class="why-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </span>
+                <h3>Client-First Thinking</h3>
+                <p>We start with your problem, not our toolbox. Before writing a single line of code, we sit with you, watch how your business runs, and ask the questions that uncover what actually needs fixing. The result is software your team adopts on day one — because it was built for them, not for a demo.</p>
+            </div>
+            <div class="why-item reveal">
+                <span class="why-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+                </span>
+                <h3>Innovation-Driven</h3>
+                <p>Technology moves fast, and businesses that move with it win. We keep our products and our skills current — modern frameworks, clean architecture, and features that solve tomorrow's problems, not just yesterday's. When you build with us, you're not buying software that expires; you're investing in a platform that improves.</p>
+            </div>
+            <div class="why-item reveal">
+                <span class="why-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </span>
+                <h3>Nepal-Built, Ready for the World</h3>
+                <p>We understand local businesses because we are one — the currencies, the taxes, the rush hours, the power cuts that shaped how companies really operate. That understanding is baked into our products, and it travels well: the same quality standards we build for Kathmandu meet what clients anywhere in the world expect.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Benefits ================= -->
+<section class="benefits">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">The Difference</span>
+            <h2 class="section-title">What our software does for your business</h2>
+            <p class="section-sub">The outcomes our clients care about — and the ones we build toward every day.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit reveal">
+                <span class="b-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </span>
+                <div>
+                    <h3>Save Time</h3>
+                    <p>Bills that took five minutes now take thirty seconds. Reports that needed a full evening generate themselves. When repetitive work runs on autopilot, your team gets hours back every single day — and those hours go into serving customers, not fighting paperwork.</p>
+                </div>
+            </div>
+            <div class="benefit reveal">
+                <span class="b-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></svg>
+                </span>
+                <div>
+                    <h3>Stay Organized</h3>
+                    <p>Every booking, order, bill, and stock movement lives in one organized place. No more overflowing registers, missing receipts, or "who changed this?" mysteries. Records stay clean, searchable, and exactly where you expect them to be when you need them.</p>
+                </div>
+            </div>
+            <div class="benefit reveal">
+                <span class="b-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                </span>
+                <div>
+                    <h3>Understand Your Business</h3>
+                    <p>Which item sells fastest? Which day of the week earns the most? Where is money quietly leaking? Live dashboards and clear reports turn your daily records into answers — so your next decision is based on facts, not gut feeling alone.</p>
+                </div>
+            </div>
+            <div class="benefit reveal">
+                <span class="b-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+                </span>
+                <div>
+                    <h3>Grow with Confidence</h3>
+                    <p>Growth breaks weak systems. Ours are built to scale — from one counter to many branches, from ten orders a day to hundreds. Add locations, add staff, add new services; the software grows alongside your ambition without needing to be replaced.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Testimonials Preview ================= -->
+<section class="t-preview">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Client Words</span>
+            <h2 class="section-title">What our clients say</h2>
+            <p class="section-sub">Real feedback from real businesses that run on our software every day.</p>
+        </div>
+        <div class="grid-3" style="grid-template-columns:repeat(3,1fr)">
+            <div class="t-card reveal">
+                <span class="t-quote-ic">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.6 4C6 6.3 3.9 9.6 3.9 13.8c0 3.6 2.1 6.2 5 6.2 2.4 0 4.2-1.8 4.2-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L9.6 4zm10 0c-3.5 2.3-5.7 5.6-5.7 9.8 0 3.6 2.1 6.2 5.1 6.2 2.3 0 4.1-1.8 4.1-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L19.6 4z"/></svg>
+                </span>
+                <div class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="t-text">"We used to run the hotel on paper registers. Now check-ins take two minutes and I can see today's revenue from my phone before I even reach the office. The Loophole team trained our staff patiently and still picks up when we call."</p>
+                <div class="t-person">
+                    <span class="t-avatar">SK</span>
+                    <span><span class="t-name">Suman Karki</span><br><span class="t-role">Hotel Manager, Kathmandu</span></span>
+                </div>
+            </div>
+            <div class="t-card reveal">
+                <span class="t-quote-ic">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.6 4C6 6.3 3.9 9.6 3.9 13.8c0 3.6 2.1 6.2 5 6.2 2.4 0 4.2-1.8 4.2-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L9.6 4zm10 0c-3.5 2.3-5.7 5.6-5.7 9.8 0 3.6 2.1 6.2 5.1 6.2 2.3 0 4.1-1.8 4.1-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L19.6 4z"/></svg>
+                </span>
+                <div class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="t-text">"The RMS completely changed our rush hours. Orders reach the kitchen instantly, bills are accurate, and I finally know which dishes actually make money. It paid for itself within the first couple of months."</p>
+                <div class="t-person">
+                    <span class="t-avatar">AG</span>
+                    <span><span class="t-name">Anisha Gurung</span><br><span class="t-role">Restaurant Owner, Lalitpur</span></span>
+                </div>
+            </div>
+            <div class="t-card reveal">
+                <span class="t-quote-ic">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.6 4C6 6.3 3.9 9.6 3.9 13.8c0 3.6 2.1 6.2 5 6.2 2.4 0 4.2-1.8 4.2-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L9.6 4zm10 0c-3.5 2.3-5.7 5.6-5.7 9.8 0 3.6 2.1 6.2 5.1 6.2 2.3 0 4.1-1.8 4.1-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L19.6 4z"/></svg>
+                </span>
+                <div class="t-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="t-text">"Stock control is finally simple. We can see supplier dues, fast-moving products, and low-stock alerts without checking multiple notebooks. The retail team saves hours every week."</p>
+                <div class="t-person">
+                    <span class="t-avatar">RP</span>
+                    <span><span class="t-name">Rajendra Poudel</span><br><span class="t-role">Retail &amp; Wholesale Supplier, Kathmandu</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= CEO Message ================= -->
+<section class="ceo">
+    <div class="container ceo-grid">
+        <div class="ceo-photo reveal">
+            <img src="images/ceo.jpg" alt="Pranish Pudasaini — Founder & CEO of Loophole InfoTech">
+            <span class="ceo-exp"><strong>2+</strong><span>Years building<br>software</span></span>
+        </div>
+        <div class="ceo-copy reveal">
+            <span class="section-tag" style="margin-bottom:20px">From the CEO</span>
+            <span class="ceo-quote-ic">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.6 4C6 6.3 3.9 9.6 3.9 13.8c0 3.6 2.1 6.2 5 6.2 2.4 0 4.2-1.8 4.2-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L9.6 4zm10 0c-3.5 2.3-5.7 5.6-5.7 9.8 0 3.6 2.1 6.2 5.1 6.2 2.3 0 4.1-1.8 4.1-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1-.3-1.9 1.5-4.4 3.4-5.6L19.6 4z"/></svg>
+            </span>
+            <blockquote>"Good software makes work easier, saves time, and helps every team do better."</blockquote>
+            <p class="ceo-bio">When I started Loophole InfoTech, the goal was never to just write code. It was to build tools that give small and growing businesses the same operating power that big companies pay millions for. Every product we release — from HMS to RMS — carries that belief.</p>
+            <p class="ceo-bio">My promise to every client is simple: we listen first, we build honestly, and we stay after launch. Your growth is the only metric that matters to us.</p>
+            <p class="ceo-name">Pranish Pudasaini</p>
+            <p class="ceo-role">Founder &amp; CEO, Loophole InfoTech</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Final CTA ================= -->
+<section class="cta">
+    <div class="container cta-inner">
+        <h2>Let's build software that works as hard as you do</h2>
+        <p>Whether you need one of our ready products or something built from scratch, the first conversation is free — and honest. Tell us what your business needs; we'll tell you exactly how we'd approach it.</p>
+        <div class="cta-actions">
+            <a href="contact.html" class="btn btn-white btn-lg">Get in Touch</a>
+            <a href="#products" class="btn btn-ghost-white btn-lg">Explore Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img class="logo-image" src="images/companylogo.jpg" alt="Loophole InfoTech logo">
+                    Loophole&nbsp;<span>InfoTech</span>
+                </a>
+                <p class="footer-tagline">Building practical software for modern businesses.</p>
+                <p>From SaaS products to custom software, we help businesses simplify operations and build for growth.</p>
+                <div class="socials">
+                    <!-- PLACEHOLDER: Replace # with real social media URLs -->
+                    <a href="https://www.linkedin.com/company/loophole-infotech/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
+                    <a href="https://www.facebook.com/profile.php?id=61593793991287" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a>
+                    <a href="https://www.instagram.com/loophole.infotech/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 105.84 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4zm6.41-11.85a1.44 1.44 0 101.44 1.44 1.44 1.44 0 00-1.44-1.44z"/></svg></a>
+                    <a href="https://wa.me/9779861780222" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.01-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.83 9.83 0 016.99 2.9 9.83 9.83 0 012.9 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45c6.56 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.47-8.42z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">SaaS Development</a></li>
+                    <li><a href="services.html">Web Applications</a></li>
+                    <li><a href="services.html">Mobile Apps</a></li>
+                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="services.html">Cloud Solutions</a></li>
+                    <li><a href="services.html">IT Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:loophole.infotech@gmail.com">loophole.infotech@gmail.com</a></li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:9861780222">9861780222</a></li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Chuchepati, Kathmandu, Nepal</li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Loophole InfoTech. All rights reserved.</p>
+            <p class="made">Designed &amp; built with care in <strong>Kathmandu, Nepal</strong></p>
+        </div>
+    </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/9779861780222?text=Hi%20Loophole%20InfoTech%2C%20I%27d%20like%20to%20know%20more%20about%20your%20software." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<script>
+(function () {
+    'use strict';
+
+    var benefits = document.querySelector('.benefits');
+    var servicesSnapshot = document.querySelector('.services-snap');
+    if (benefits && servicesSnapshot) servicesSnapshot.parentNode.insertBefore(benefits, servicesSnapshot);
+
+    /* ===== 1. Mobile navigation toggle ===== */
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    /* ===== 2. Close mobile menu when a link is clicked (accessibility) ===== */
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    /* Close menu when clicking outside */
+    document.addEventListener('click', function (e) {
+        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    /* Close menu with Escape key */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    /* ===== 3. Smooth scrolling for same-page anchors ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var id = anchor.getAttribute('href');
+            if (id.length > 1) {
+                var target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, '', id);
+                }
+            }
+        });
+    });
+
+    /* ===== 4. Active nav highlighting (fallback) ===== */
+    var page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (href === page || (page === 'index.html' && href === '#products')) {
+            if (page === 'index.html' && href.startsWith('#')) return;
+            link.classList.add('active');
+        }
+    });
+
+    /* ===== 5. Reveal on scroll ===== */
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }
+})();
+</script>
+</body>
+</html>

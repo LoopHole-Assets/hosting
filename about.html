@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Unique title & description for the About page -->
+    <title>About Loophole InfoTech | Building Practical Software from Nepal</title>
+    <meta name="description" content="Meet Loophole InfoTech — a Kathmandu-based software company building HMS, RMS and custom software for growing businesses. Learn our story, mission, and how we work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/companylogo.jpg">
+    <style>
+    /* ============================================================
+       Loophole InfoTech — Shared Design System
+       Font: Plus Jakarta Sans | Primary: #2563EB
+       ============================================================ */
+    :root{
+        --primary:#2563EB;
+        --primary-dark:#1D4ED8;
+        --primary-light:#EFF6FF;
+        --dark:#0F172A;
+        --text:#475569;
+        --muted:#64748B;
+        --light:#F8FAFC;
+        --border:#E2E8F0;
+        --white:#FFFFFF;
+        --whatsapp:#25D366;
+        --radius:14px;
+        --radius-lg:22px;
+        --shadow-sm:0 1px 3px rgba(15,23,42,.06);
+        --shadow:0 12px 32px -14px rgba(15,23,42,.16);
+        --shadow-lg:0 26px 60px -22px rgba(15,23,42,.24);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.75;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit;transition:color .2s ease}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5,h6{color:var(--dark);font-weight:800;letter-spacing:-.015em;line-height:1.25}
+    .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+    section{padding:96px 0}
+    .section-head{max-width:700px;margin:0 auto 56px;text-align:center}
+    .section-tag{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:var(--primary-light);border:1px solid #DBEAFE;padding:6px 15px;border-radius:999px;margin-bottom:18px}
+    .section-title{font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px}
+    .section-sub{font-size:1.05rem;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:.97rem;font-family:inherit;cursor:pointer;border:2px solid transparent;transition:all .25s ease;line-height:1.25;white-space:nowrap}
+    .btn svg{flex:none}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 20px -8px rgba(37,99,235,.5)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(37,99,235,.55)}
+    .btn-outline{border-color:var(--border);color:var(--dark);background:var(--white)}
+    .btn-outline:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+    .btn-white{background:#fff;color:var(--primary-dark)}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(2,6,23,.4)}
+    .btn-ghost-white{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+    .btn-ghost-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+    .btn-sm{padding:10px 20px;font-size:.88rem;border-radius:10px}
+    .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+    .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.2rem;color:var(--dark);letter-spacing:-.02em}
+    .logo .logo-mark{flex:none}
+    .logo-image{width:36px;height:36px;object-fit:contain;border-radius:10px;flex:none}
+    .logo span{color:var(--primary)}
+    .nav-links{display:flex;align-items:center;gap:4px}
+    .nav-links a{padding:10px 15px;border-radius:10px;font-weight:600;font-size:.94rem;color:var(--text)}
+    .nav-links a:hover{color:var(--primary);background:var(--primary-light)}
+    .nav-links a.active{color:var(--primary);background:var(--primary-light)}
+    .nav-cta{flex:none}
+    .nav-drawer-cta{display:none}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:none;background:transparent;cursor:pointer;padding:10px;border-radius:10px}
+    .hamburger span{display:block;height:2.5px;width:100%;background:var(--dark);border-radius:4px;transition:all .3s ease}
+    .hamburger.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    footer{background:var(--light);border-top:1px solid var(--border);padding:72px 0 0}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:56px}
+    .footer-brand p{font-size:.95rem;margin:16px 0 22px;max-width:320px}
+    .footer-tagline{font-weight:700;color:var(--dark)}
+    .socials{display:flex;gap:10px}
+    .socials a{width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);transition:all .25s ease}
+    .socials a:hover{background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-3px)}
+    .footer-col h4{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dark);margin-bottom:20px}
+    .footer-col ul li{margin-bottom:11px}
+    .footer-col ul a{font-size:.94rem;color:var(--muted)}
+    .footer-col ul a:hover{color:var(--primary)}
+    .footer-contact li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;color:var(--muted);margin-bottom:13px}
+    .footer-contact svg{flex:none;margin-top:4px;color:var(--primary)}
+    .footer-bottom{border-top:1px solid var(--border);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .footer-bottom p{font-size:.88rem;color:var(--muted)}
+    .footer-bottom .made{font-size:.88rem;color:var(--muted)}
+    .footer-bottom .made strong{color:var(--dark)}
+    .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:1100;width:58px;height:58px;border-radius:50%;background:var(--whatsapp);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:transform .25s ease,box-shadow .25s ease}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 16px 34px rgba(37,211,102,.55)}
+    .wa-tooltip{position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);background:var(--dark);color:#fff;font-size:.8rem;font-weight:600;padding:8px 14px;border-radius:9px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s ease}
+    .whatsapp-float:hover .wa-tooltip{opacity:1}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+    /* ---- Page hero (inner pages) ---- */
+    .page-hero{padding:88px 0 76px;text-align:center;background:radial-gradient(900px 420px at 80% -20%,#EFF6FF 0%,transparent 60%),radial-gradient(700px 380px at 10% 120%,#EFF6FF 0%,transparent 55%),#fff}
+    .page-hero h1{font-size:clamp(2.1rem,4.6vw,3.1rem);margin:20px 0 16px;letter-spacing:-.025em}
+    .page-hero .lead{max-width:680px;margin:0 auto;font-size:1.1rem;color:var(--muted)}
+
+    /* ---- Our story ---- */
+    .story-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+    .story-text h2{margin-bottom:18px}
+    .story-text p{margin-bottom:16px}
+    .story-media{position:relative}
+    .story-media::after{content:"";position:absolute;left:-18px;top:-18px;width:55%;height:55%;border:3px solid var(--primary);border-radius:24px;z-index:0;opacity:.35}
+    .story-media img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:24px;box-shadow:var(--shadow-lg)}
+    .story-caption{position:absolute;z-index:2;right:-14px;bottom:26px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:14px 20px;max-width:250px}
+    .story-caption b{display:block;font-size:.85rem;color:var(--dark)}
+    .story-caption small{font-size:.74rem;color:var(--muted)}
+    .values-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+    .value-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:32px 30px;transition:transform .3s ease,box-shadow .3s ease}
+    .value-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .value-card .v-icon{width:50px;height:50px;border-radius:13px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;margin-bottom:18px}
+    .value-card h3{font-size:1.12rem;margin-bottom:10px}
+    .value-card p{font-size:.93rem}
+
+    /* ---- Mission & Vision ---- */
+    .mv{background:var(--light)}
+    .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .mv-card{border-radius:var(--radius-lg);padding:48px 44px;position:relative;overflow:hidden}
+    .mv-card::before{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08);width:260px;height:260px;top:-130px;right:-90px}
+    .mv-mission{background:linear-gradient(145deg,#2E6BF0,var(--primary-dark));color:#DBEAFE}
+    .mv-vision{background:#fff;border:1px solid var(--border)}
+    .mv-card .mv-icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:22px;position:relative;z-index:1}
+    .mv-mission .mv-icon{background:rgba(255,255,255,.16);color:#fff}
+    .mv-vision .mv-icon{background:var(--primary-light);color:var(--primary)}
+    .mv-card h3{font-size:1.45rem;margin-bottom:14px;position:relative;z-index:1}
+    .mv-mission h3{color:#fff}
+    .mv-card p{font-size:1rem;position:relative;z-index:1}
+
+    /* ---- Why choose us ---- */
+    .wc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .wc-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:32px 26px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+    .wc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#BFDBFE}
+    .wc-card .wc-icon{width:52px;height:52px;border-radius:14px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;margin-bottom:18px}
+    .wc-card h3{font-size:1.08rem;margin-bottom:10px}
+    .wc-card p{font-size:.9rem}
+
+    /* ---- Our approach timeline ---- */
+    .approach{background:var(--light)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:step}
+    .step{position:relative;background:#fff;border:1px solid var(--border);border-radius:18px;padding:34px 28px;transition:transform .3s ease,box-shadow .3s ease}
+    .step:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .step:not(:last-child)::after{content:"";position:absolute;top:56px;right:-26px;width:26px;height:2px;background:repeating-linear-gradient(90deg,#94A3B8 0 4px,transparent 4px 8px)}
+    .step-num{width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:18px;font-size:1.02rem;box-shadow:0 8px 18px -6px rgba(37,99,235,.5)}
+    .step h3{font-size:1.1rem;margin-bottom:10px}
+    .step p{font-size:.9rem}
+
+    /* ---- Team ---- */
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .team-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:38px 30px;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+    .team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .team-photo{width:112px;height:112px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:4px solid var(--primary-light);box-shadow:var(--shadow-sm)}
+    .team-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+    .team-avatar{width:112px;height:112px;border-radius:50%;margin:0 auto 20px;background:linear-gradient(135deg,#3B82F6,#1D4ED8);color:#fff;font-weight:800;font-size:1.7rem;display:grid;place-items:center;border:4px solid var(--primary-light)}
+    .team-card h3{font-size:1.15rem;margin-bottom:4px}
+    .team-role{color:var(--primary);font-weight:700;font-size:.88rem;margin-bottom:14px}
+    .team-card p{font-size:.9rem}
+    .team-note{text-align:center;margin-top:36px;font-size:.92rem;color:var(--muted)}
+
+    /* ---- CTA ---- */
+    .cta{background:linear-gradient(135deg,#2E6BF0 0%,var(--primary-dark) 100%);position:relative;overflow:hidden;padding:100px 0}
+    .cta::before,.cta::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+    .cta::before{width:420px;height:420px;top:-190px;right:-120px}
+    .cta::after{width:320px;height:320px;bottom:-170px;left:-100px}
+    .cta-inner{position:relative;z-index:1;text-align:center}
+    .cta h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:18px}
+    .cta p{color:rgba(255,255,255,.88);max-width:660px;margin:0 auto 36px;font-size:1.08rem}
+    .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    /* ---- Responsive ---- */
+    @media (max-width:1024px){
+        .wc-grid{grid-template-columns:repeat(2,1fr)}
+        .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+    }
+    @media (max-width:900px){
+        .hamburger{display:flex}
+        .nav-links{position:fixed;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:18px 24px 26px;gap:4px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);transform:translateY(-130%);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease;z-index:999}
+        .nav-links.active{transform:none;opacity:1;pointer-events:auto}
+        .nav-links a{padding:13px 14px;font-size:1rem}
+        .nav-cta{display:none}
+        .nav-links a.nav-drawer-cta{display:inline-flex;justify-content:center;width:100%;margin-top:10px;padding:13px 20px}
+        .story-grid{grid-template-columns:1fr;gap:52px}
+        .story-media{max-width:440px;margin:0 auto}
+        .values-row{grid-template-columns:1fr;gap:18px;margin-top:48px}
+        .steps{grid-template-columns:1fr 1fr}
+        .step:not(:last-child)::after{display:none}
+        .mv-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:768px){
+        section{padding:76px 0}
+        .team-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+    }
+    @media (max-width:600px){
+        .wc-grid{grid-template-columns:1fr}
+        .steps{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+        .footer-grid{grid-template-columns:1fr}
+        .cta-actions .btn{width:100%}
+    }
+    </style>
+</head>
+<body>
+<!-- ================= Navbar ================= -->
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo" aria-label="Loophole InfoTech — Home">
+            <img class="logo-image" src="images/companylogo.jpg" alt="Loophole InfoTech logo">
+            Loophole&nbsp;<span>InfoTech</span>
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm nav-drawer-cta">Get Started</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ================= Page Hero ================= -->
+<section class="page-hero">
+    <div class="container">
+        <span class="section-tag">About Us</span>
+        <h1>The team behind software that businesses rely on</h1>
+        <p class="lead">We're a Kathmandu-based software company with one focus: building practical tools that help real businesses run better every day.</p>
+    </div>
+</section>
+
+<!-- ================= Our Story ================= -->
+<section class="story">
+    <div class="container">
+        <div class="story-grid">
+            <div class="story-text reveal">
+                <span class="section-tag">Our Story</span>
+                <h2>Started with a frustration. Grew into a mission.</h2>
+                <p>Loophole InfoTech began with a familiar scene: a restaurant owner buried under paper order slips at the end of a long night, trying to match bills with a calculator and a fading memory. That moment — repeated in hotels, shops, and cafÃ©s all over Kathmandu — was the spark.</p>
+                <p>We asked a simple question: why should small and growing businesses run blind when software could give them clear eyes? Our first product was built for exactly that. Then came the next one, and the next — each shaped by long conversations with the people who would actually use it, from front-desk staff to kitchen chefs to shop owners.</p>
+                <p>Today, we're a full software company. We build our own products — HMS for hotels, RMS for restaurants, and our Retail Management System for stores — and we design custom software for businesses whose needs don't fit off-the-shelf tools. Different products, one philosophy: software should make the workday simpler, not more complicated.</p>
+            </div>
+            <div class="story-media reveal">
+                <img src="images/rms-restaurant.png" alt="LoopholeRMS — the restaurant management product built by Loophole InfoTech, running on desktop, tablet and mobile">
+                <span class="story-caption"><b>Built in Kathmandu.</b><small>Our RMS product serving restaurants across Nepal</small></span>
+            </div>
+        </div>
+        <div class="values-row">
+            <div class="value-card reveal">
+                <span class="v-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+                </span>
+                <h3>Practical Innovation</h3>
+                <p>We love new technology, but we never chase trends for their own sake. Every feature we ship has to earn its place by solving a real problem that a real business feels. If it doesn't save time, prevent loss, or make a decision easier — it doesn't make the cut.</p>
+            </div>
+            <div class="value-card reveal">
+                <span class="v-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </span>
+                <h3>Built Around People</h3>
+                <p>Software is only successful when the people using it actually like it. That's why we design for the cashier on a busy Saturday, the waiter with full hands, and the owner checking numbers from home — not just for a polished demo. Simple screens, clear language, patient training.</p>
+            </div>
+            <div class="value-card reveal">
+                <span class="v-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6"/><path d="M2 11.5a10 10 0 0118.8-4.3M22 12.5a10 10 0 01-18.8 4.2"/></svg>
+                </span>
+                <h3>Always Improving</h3>
+                <p>Launching is the beginning, not the end. We release updates based on client feedback, fix issues fast, and keep refining until the software feels effortless. Our clients' daily frustrations are our product roadmap — and it's the most honest roadmap we could ask for.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Mission & Vision ================= -->
+<section class="mv">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Direction</span>
+            <h2 class="section-title">Our mission &amp; vision</h2>
+            <p class="section-sub">Two sentences that keep us honest when we decide what to build and how to build it.</p>
+        </div>
+        <div class="mv-grid">
+            <div class="mv-card mv-mission reveal">
+                <span class="mv-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </span>
+                <h3>Our Mission</h3>
+                <p>To give every growing business — regardless of size or budget — software that simplifies daily operations, protects their data, and turns their records into decisions they can act on with confidence.</p>
+            </div>
+            <div class="mv-card mv-vision reveal">
+                <span class="mv-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+                <h3>Our Vision</h3>
+                <p>To become the software partner that businesses across Nepal reach for first — and to prove from Kathmandu that world-class products can be built anywhere talent, honesty, and hard work meet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= Why Choose Us ================= -->
+<section class="whychoose">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">What working with Loophole feels like</h2>
+            <p class="section-sub">Four commitments we make to every client — and keep long after the launch day confetti is gone.</p>
+        </div>
+        <div class="wc-grid">
+            <div class="wc-card reveal">
+                <span class="wc-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                </span>
+                <h3>Quality Code</h3>
+                <p>We write clean, tested, well-documented code — the kind future developers can read and build on. That means fewer crashes, faster updates, and software that stays healthy for years instead of months.</p>
+            </div>
+            <div class="wc-card reveal">
+                <span class="wc-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </span>
+                <h3>On-Time Delivery</h3>
+                <p>We plan honestly and communicate constantly, so launch dates are promises rather than hopes. If something changes, you hear it from us early — never as a surprise at the deadline.</p>
+            </div>
+            <div class="wc-card reveal">
+                <span class="wc-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                </span>
+                <h3>Dedicated Support</h3>
+                <p>When you call, a person who knows your system answers — not a ticket number. We train your team, respond quickly when something needs attention, and treat your business like it's ours.</p>
+            </div>
+            <div class="wc-card reveal">
+                <span class="wc-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                </span>
+                <h3>Scalable Solutions</h3>
+                <p>We build for where you're going, not just where you are. Our systems handle more branches, more staff, and more customers without needing to be torn down and rebuilt when you grow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Our Approach ================= -->
+<section class="approach">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Our Approach</span>
+            <h2 class="section-title">How we take a project from idea to impact</h2>
+            <p class="section-sub">A simple, transparent process — you'll always know what's happening and what comes next.</p>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <span class="step-num">1</span>
+                <h3>Understand</h3>
+                <p>We sit with you and your team, watch how the work actually flows, and map the problems worth solving. No assumptions — we listen until we can explain your business back to you.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">2</span>
+                <h3>Plan</h3>
+                <p>We turn findings into a clear scope, realistic timeline, and honest budget. You'll see exactly what will be built, in what order, and why — before any code is written.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">3</span>
+                <h3>Build</h3>
+                <p>We develop in short cycles with regular demos, so you see progress early and often. Your feedback shapes the product as it grows — not after it's finished.</p>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">4</span>
+                <h3>Improve</h3>
+                <p>After launch, we stay close: training, support, and updates driven by real usage. The software keeps getting better because we keep listening.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= Footer ================= -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img class="logo-image" src="images/companylogo.jpg" alt="Loophole InfoTech logo">
+                    Loophole&nbsp;<span>InfoTech</span>
+                </a>
+                <p class="footer-tagline">Building practical software for modern businesses.</p>
+                <p>From SaaS products to custom software, we help businesses simplify operations and build for growth.</p>
+                <div class="socials">
+                    <!-- PLACEHOLDER: Replace # with real social media URLs -->
+                    <a href="https://www.linkedin.com/company/loophole-infotech/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
+                    <a href="https://www.facebook.com/profile.php?id=61593793991287" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></svg></a>
+                    <a href="https://www.instagram.com/loophole.infotech/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 105.84 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4zm6.41-11.85a1.44 1.44 0 101.44 1.44 1.44 1.44 0 00-1.44-1.44z"/></svg></a>
+                    <a href="https://wa.me/9779861780222" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.01-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.83 9.83 0 016.99 2.9 9.83 9.83 0 012.9 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45c6.56 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.47-8.42z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">SaaS Development</a></li>
+                    <li><a href="services.html">Web Applications</a></li>
+                    <li><a href="services.html">Mobile Apps</a></li>
+                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="services.html">Cloud Solutions</a></li>
+                    <li><a href="services.html">IT Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2-2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:loophole.infotech@gmail.com">loophole.infotech@gmail.com</a></li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:9861780222">9861780222</a></li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Chuchepati, Kathmandu, Nepal</li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Mon – Fri, 9:00 AM – 6:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Loophole InfoTech. All rights reserved.</p>
+            <p class="made">Designed &amp; built with care in <strong>Kathmandu, Nepal</strong></p>
+        </div>
+    </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/9779861780222?text=Hi%20Loophole%20InfoTech%2C%20I%27d%20like%20to%20know%20more%20about%20your%20software." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ===== 1. Mobile navigation toggle ===== */
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    /* ===== 2. Close mobile menu when a link is clicked (accessibility) ===== */
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    /* Close menu when clicking outside */
+    document.addEventListener('click', function (e) {
+        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    /* Close menu with Escape key */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    /* ===== 3. Smooth scrolling for same-page anchors ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var id = anchor.getAttribute('href');
+            if (id.length > 1) {
+                var target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, '', id);
+                }
+            }
+        });
+    });
+
+    /* ===== 4. Active nav highlighting (fallback) ===== */
+    var page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (href === page || (page === 'index.html' && href === '#products')) {
+            if (page === 'index.html' && href.startsWith('#')) return;
+            link.classList.add('active');
+        }
+    });
+
+    /* ===== 5. Reveal on scroll ===== */
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }
+})();
+</script>
+</body>
+</html>
